@@ -6,6 +6,15 @@ const user = {
     isAdmin: true
 }
 
+const obj = {};
+const name = "John";
+const num = 10;
+
+
+console.log(obj.__proto__)
+console.log(name.__proto__)
+console.log(num.__proto__)
+
 
 Promise.resolve(user).then(data => {
     setTimeout(() => {
