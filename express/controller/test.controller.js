@@ -1,5 +1,8 @@
 const test1 = (req, res) => {
     try {
+        for (let i = 0; i <= 1e6; i++) {
+            console.log(i)
+        }
         res.status(200).json({ success: true, message: "Test 1" })
     } catch (err) {
         console.error(err)
