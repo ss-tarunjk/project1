@@ -34,3 +34,12 @@ counter2.dec();
 counter2.dec();
 
 console.log(counter2.getValue())
+
+let b;
+let c = 5;
+
+console.log(b, c)
+
+    (function () {
+        console.log(b, c)
+    })()
