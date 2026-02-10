@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IndexedDB Demo</title>
+</head>
+
+<body>
+    <h2>IndexedDB Users</h2>
+
+    <button onclick="addUser({ id: 20, name: 'Tarun', email: 'tarunss@test.com',test:'sss' })">
+        Add User
+    </button>
+
+    <button onclick="getUser(1)">
+        Get User (ID 1)
+    </button>
+
+    <button onclick="getUsers()">
+        Get All Users
+    </button>
+
+    <button onclick="deleteUser(1)">
+        Delete User (ID 1)
+    </button>
+
+    <pre id="output"></pre>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
