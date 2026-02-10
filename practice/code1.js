@@ -1,23 +1,36 @@
-function outer() {
-    let count = 0;
+function outer(initialValue = 0) {
+    let count = initialValue;
 
-    function inner() {
+    function inc() {
         count++;
-        console.log(count);
     }
 
-    return inner;
+    function dec() {
+        count--;
+    }
+
+    function getValue() {
+        return count
+    }
+
+
+
+    return { inc, dec, getValue };
 }
 
-const counter1 = outer();
-const counter2 = outer();
+const counter1 = outer(10);
+const counter2 = outer(100);
 
 
-counter1();
-counter1();
-counter1();
+counter1.inc();
+counter1.inc();
+counter1.dec();
+
+console.log(counter1.getValue())
 
 
-counter2();
-counter2();
-counter2(); 
+counter2.dec();
+counter2.dec();
+counter2.dec();
+
+console.log(counter2.getValue())
