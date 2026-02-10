@@ -27,7 +27,8 @@
             };
 
             // Send data to parent window
-            window.parent.postMessage(data, "http://127.0.0.1:5500");
+            window.parent.postMessage(data, "http://127.0.0.2:5500");
+            // window.parent.postMessage(data, "*");
         }
     </script>
 

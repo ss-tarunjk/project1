@@ -16,10 +16,24 @@
 
     <hr>
 
+    <div style="width: 100px; height: 100px; background-color: red;" id="box"></div>
+
     <iframe src="iframe.html" width="400" height="250" style="border:1px solid #ccc;">
     </iframe>
 
     <script>
+
+        postMessage({ name: "John", email: "john@example.com", age: 30 }, "http://127.0.0.1:5500");
+
+        addEventListener("click", (event) => {
+            console.log(event)
+        });
+
+        const box = document.getElementById("box");
+        box.addEventListener("mousemove", (event) => {
+            console.log(event.clientX, event.clientY)
+        });
+
         window.addEventListener("message", (event) => {
             console.log(event)
             // ⚠️ Security check (important in real apps)
@@ -33,6 +47,8 @@
                 <p>Age: ${data.age}</p>
             `;
         });
+
+
     </script>
 
 </body>
