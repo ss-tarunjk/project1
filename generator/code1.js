@@ -8,9 +8,9 @@ const generator1 = generateSequence();
 // const generator2 = generateSequence();
 
 
-console.log(generator1.next().value);
-console.log(generator1.next().value);
-console.log(generator1.next().value);
+console.log(generator1.next());
+console.log(generator1.next());
+console.log(generator1.next());
 
 
 

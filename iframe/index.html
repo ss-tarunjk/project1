@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Parent Page</title>
+</head>
+
+<body>
+
+    <h2>Parent Website</h2>
+
+    <div id="result">
+        <strong>Submitted Data will appear here</strong>
+    </div>
+
+    <hr>
+
+    <iframe src="iframe.html" width="400" height="250" style="border:1px solid #ccc;">
+    </iframe>
+
+    <script>
+        window.addEventListener("message", (event) => {
+            console.log(event)
+            // ⚠️ Security check (important in real apps)
+            // if (event.origin !== "http://your-domain.com") return;
+
+            const data = event.data;
+
+            document.getElementById("result").innerHTML = `
+                <p>Name: ${data.name}</p>
+                <p>Email: ${data.email}</p>
+                <p>Age: ${data.age}</p>
+            `;
+        });
+    </script>
+
+</body>
+
+</html>
